@@ -30,6 +30,10 @@ export default definePreset({
 			arguments: ['i'],
 		});
 		await executeCommand({
+			command: 'pnpm',
+			arguments: ['format'],
+		});
+		await executeCommand({
 			command: 'git',
 			arguments: ['add', '.'],
 		});
