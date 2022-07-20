@@ -1,8 +1,6 @@
 export default definePreset({
 	name: 'custom-sveltekit',
-	options: {
-		// ...
-	},
+	options: {},
 	handler: async () => {
 		await executeCommand({
 			command: 'git',
@@ -30,6 +28,19 @@ export default definePreset({
 		await executeCommand({
 			command: 'pnpm',
 			arguments: ['i'],
+		});
+		await executeCommand({
+			command: 'git',
+			arguments: ['add', '.'],
+		});
+		await executeCommand({
+			command: 'git',
+			arguments: [
+				'commit',
+				'-a',
+				'-m',
+				'"From preset: mattlehrer/custom-sveltekit"',
+			],
 		});
 	},
 });
