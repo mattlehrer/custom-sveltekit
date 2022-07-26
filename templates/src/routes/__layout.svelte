@@ -7,9 +7,8 @@
 
 <Nav />
 
-<!-- This div is so that the grid layout pins the footer to the bottom of the page even if the content is shorter than the page. -->
-<div>
+<main>
 	<slot />
-</div>
+</main>
 
 <Footer />
