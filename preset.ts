@@ -20,6 +20,15 @@ export default definePreset({
 			}
 		});
 		await group({
+			title: 'add vitest',
+			handler: async () => {
+				await executeCommand({
+					command: 'npx',
+					arguments: ['@preset/cli', 'davipon/svelte-add-vitest', '--ts', '--msw', '--example'],
+				});
+			}
+		});
+		await group({
 			title: 'extract template',
 			handler: async () => {
 				await extractTemplates();
