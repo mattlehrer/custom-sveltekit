@@ -23,7 +23,7 @@ export default definePreset({
 			title: 'add vitest',
 			handler: async () => {
 				await executeCommand({
-					command: 'npx',
+					command: 'pnpx',
 					arguments: ['@preset/cli', 'davipon/svelte-add-vitest', '--ts', '--msw', '--example'],
 				});
 			}
